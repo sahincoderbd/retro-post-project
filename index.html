@@ -3,9 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retro Blog Website</title>
+    <title>Forum Landing Page</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWdWSSV1L2t1tU9fAfO2SvfJ/2N1x3X+6gL9Ok/yB2a6G+vG1gL2hH2X+6gL9Ok/yB2a6G+v==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
+<body class="bg-white font-sans container mx-auto">
+    <!-- Navbar -->
+  
+<header>
+  <div class="navbar bg-transparent shadow-none flex-col lg:flex-row ">
+    <div class="navbar-start justify-center lg:justify-start items-center lg:items-start">
+      <a class="text-4xl font-semibold">Retro</a>
+    </div>
     
+    <div class="navbar-end w-full lg:w-1/2 justify-center lg:justify-end items-center lg:items-start ">
+        <ul class="flex flex-nowrap justify-center p-0 lg:mr-4 ">
+            <li >
+              <a class="tooltip tooltip-bottom hover:bg-transparent p-2" data-tip="Home">
+                <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
+                    <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
+                    <path d="M18.25 28.0001L27.204 19.0451C27.644 18.6061 28.356 18.6061 28.795 19.0451L37.75 28.0001M20.5 25.7501V35.8751C20.5 36.4961 21.004 37.0001 21.625 37.0001H25.75V32.1251C25.75 31.5041 26.254 31.0001 26.875 31.0001H29.125C29.746 31.0001 30.25 31.5041 30.25 32.1251V37.0001H34.375C34.996 37.0001 35.5 36.4961 35.5 35.8751V25.7501M24.25 37.0001H32.5" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+              </a>
+            </li>
+            <li>
+              <a class="tooltip tooltip-bottom hover:bg-transparent p-2 " data-tip="Create Post">
+                <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
+                  <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
+                  <path d="M32.862 20.487L34.549 18.799C34.9007 18.4473 35.3777 18.2498 35.875 18.2498C36.3723 18.2498 36.8493 18.4473 37.201 18.799C37.5527 19.1507 37.7502 19.6277 37.7502 20.125C37.7502 20.6223 37.5527 21.0993 37.201 21.451L22.832 35.82C22.3033 36.3484 21.6514 36.7367 20.935 36.95L18.25 37.75L19.05 35.065C19.2633 34.3486 19.6516 33.6967 20.18 33.168L32.863 20.487H32.862ZM32.862 20.487L35.5 23.125" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </a>
+            </li>
+            <li>
+              <a class="tooltip tooltip-bottom hover:bg-transparent p-2" data-tip="Join Forum">
+                <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
+                  <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
+                  <path d="M34 23.5V26.5M34 26.5V29.5M34 26.5H37M34 26.5H31M28.75 22.375C28.75 23.2701 28.3944 24.1285 27.7615 24.7615C27.1285 25.3944 26.2701 25.75 25.375 25.75C24.4799 25.75 23.6214 25.3944 22.9885 24.7615C22.3556 24.1285 22 23.2701 22 22.375C22 21.4799 22.3556 20.6214 22.9885 19.9885C23.6214 19.3556 24.4799 19 25.375 19C26.2701 19 27.1285 19.3556 27.7615 19.9885C28.3944 20.6214 28.75 21.4799 28.75 22.375ZM19 35.235V35.125C19 33.4342 19.6716 31.8127 20.8672 30.6172C22.0627 29.4216 23.6842 28.75 25.375 28.75C27.0658 28.75 28.6873 29.4216 29.8828 30.6172C31.0784 31.8127 31.75 33.4342 31.75 35.125V35.234C29.8255 36.3931 27.6206 37.0038 25.374 37C23.043 37 20.862 36.355 19 35.234V35.235Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+              </a>
+            </li>
+            <li>
+              <a class="tooltip tooltip-bottom hover:bg-transparent p-2" data-tip="Language">
+                <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
+                  <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
+                  <path d="M19 19V20.5M19 20.5L21.77 19.807C23.8544 19.286 26.0564 19.528 27.978 20.489L28.086 20.543C29.9688 21.4843 32.1219 21.7359 34.171 21.254L37.281 20.522C36.9029 24.0115 36.9046 27.5318 37.286 31.021L34.172 31.753C32.1227 32.2354 29.9692 31.9842 28.086 31.043L27.978 30.989C26.0564 30.028 23.8544 29.786 21.77 30.307L19 31M19 20.5V31M19 37V31" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  
+                  
+              </a>
+            </li>
+            
+          </ul>
+        <button class="btn bg-[#797DFC] text-white cursor-pointer rounded-full px-6 py-6 text-lg font-medium">Sign up</button>
+        
+    </div>
+  </div>
+</header>
+<main class="px-2 lg:px-0">
+<!-- hero section -->
+<div
+class="hero min-h-[500px] rounded-3xl "
+style="background-image: url(images/Group\ 8\ \(1\).jpg);"
+>
+<div class="rounded-3xl"></div>
+<div class="hero-overlay text-neutral-content text-left flex flex-col lg:flex-row items-center justify-start p-3 lg:px-20 rounded-3xl">
+  <div class=" flex flex-col basis-2/3 items-center lg:items-start justify-center">
+    <h1 class="mb-5 text-4xl lg:text-6xl text-center lg:text-left font-extrabold">Welcome to the <br><span class="bg-gradient-to-r from-violet-500 to-violet-800 bg-clip-text text-transparent">
+      ReTro Forum
+    </span></h1>
+    <p class="mb-5 text-lg text-center lg:text-left">
+      Share your favorite opinion and win and wp <br>forum coffee mug!
+    </p>
+    <div class="flex flex-nowrap gap-2 bg-white p-1 rounded-full items-center">
+      <label class="input rounded-full border-none shadow-none focus-within:shadow-none outline-none focus-within:outline-none">
+        <svg class="h-[1em] text-gray-700 opacity-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+            <circle cx="11" cy="11" r="8"></circle>
+            <path d="m21 21-4.3-4.3"></path>
+          </g>
+        </svg>
+        <input
+          type="search"
+          placeholder="Search Category"
+          required
+          class="text-gray-700 rounded-full border-none outline-none focus:outline-none ring-0 focus:ring-0 shadow-none focus:shadow-none"
+        />
+      </label>
+      
+  
+<button class="btn bg-[#797DFC] text-white cursor-pointer rounded-full px-6 py-6 text-lg font-medium">Search</button>
+  </div>
+    
+  </div>
+  <div class="flex flex-col w-full lg:basis-[20%] bg-white rounded-2xl px-4 lg:p-10 py-3 gap-3 lg:gap-5 ">
+  <div class="flex justify-between text-gray-600"><p>Registered Users</p><p>01</p></div>
+  <div class="flex justify-between text-gray-600"><p>Forum</p><p>05</p></div>
+  <div class="flex justify-between text-gray-600"><p>Topics</p><p>01</p></div>
+  <div class="flex justify-between text-gray-600"><p>Replies</p><p>01</p></div>
+  </div>
+</div>
+</div>
+
+<!-- lets discuss section -->
+ <section class="flex flex-col gap-3 lg:gap-5 text-center mt-10">
+<!-- top section -->
+  <div class="flex flex-col gap-3 lg:gap-4 text-center mb-7">
+    <h2 class="text-3xl lg:text-5xl text-black font-extrabold">Let's Discuss</h2>
+ <p class="mb-5 text-lg text-center text-gray-600">
+  Yes, you can run unit tests and view the results directly within the app. The<br> integrated testing features allow for a streamlined .
+</p>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-3 lg:gap-4 text-center mb-7">
+     <!-- left post side -->
+    <div class="flex flex-col gap-4 flex-1  bg-[#797DFC1A] rounded-2xl border-2 border-[#797DFC] p-4">
+    <!-- post-1 -->
+      <div class="flex gap-5">
+        <!-- profile image -->
+        <div class="indicator">
+          <span class="indicator-item status status-success"></span>
+          <div class="bg-white grid place-items-center rounded-xl shadow-sm h-15 w-15">
+            <img src="images/Rectangle 4.svg" alt="profile">
+          </div>
+        </div>
+        <!-- post content -->
+         <div class="flex flex-col gap-2 text-left flex-1">
+          
+          <div class="flex gap-4 text-gray-600">
+          <p># <span>Music</span> </p>
+          <p>Author: <span>Awlad Hossain</span> </p>
+          </div>
+         <h3 class="text-xl lg:text-2xl text-black font-semibold">10 Kids Unaware of Their Halloween Costume</h3>
+        <p class="text-lg text-gray-600 border-b-[#12132D40] pb-5 border-b border-dashed">It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative</p>
+         
+
+
+        <!-- post info -->
+        <div class="flex">
+          <span class="inline"><img src="images/tabler-icon-message-2.svg" alt="">560</span>
+        </div>
+        </div>
+        
+         
+      </div>
+      
+    </div>
+<!-- right side bar -->
+    <div class="flex flex-col gap-3 rounded-xl bg-gray-200 min-h-60 p-3 lg:p-4 basis-[450px] ">
+
+       <div class="flex flex-nowrap justify-between mb-3 ">
+       <h3>Title</h3>
+
+       <div class="flex flex-nowrap gap-1 text-gray-800"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g clip-path="url(#clip0_30_2429)">
+    <path d="M7 12L12 17L22 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M2 12L7 17M12 12L17 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_30_2429">
+    <rect width="24" height="24" fill="white"/>
+    </clipPath>
+    </defs>
+      </svg>Mark as read (<span>0</span>)</div>
+       </div>
+
+    <div class="flex flex-nowrap justify-between items-center gap-4 p-3 rounded-xl bg-white text-left">
+
+    <h5 class="basis-2/3">10 Kids Unaware of Their Halloween Costume</h5>
+    
+    <div class="text-gray-700 text-lg basis-1/3 flex flex-1 justify-end">
+
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11.6667 14C11.6667 14.6188 11.9125 15.2123 12.3501 15.6499C12.7877 16.0875 13.3812 16.3333 14 16.3333C14.6188 16.3333 15.2123 16.0875 15.6499 15.6499C16.0875 15.2123 16.3333 14.6188 16.3333 14C16.3333 13.3812 16.0875 12.7877 15.6499 12.3501C15.2123 11.9125 14.6188 11.6667 14 11.6667C13.3812 11.6667 12.7877 11.9125 12.3501 12.3501C11.9125 12.7877 11.6667 13.3812 11.6667 14Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M24.5 14C21.7 18.6667 18.2 21 14 21C9.8 21 6.3 18.6667 3.5 14C6.3 9.33333 9.8 7 14 7C18.2 7 21.7 9.33333 24.5 14Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+     ( <span>0</span>)</div>
+    </div>
+
+    </div>
+    <div>
+
+
+    </div>
+
+
+  </div>
+ 
+
+
+
+
+
+ </section>
+</main>
+
+<footer>
+
+</footer>
+   
 </body>
 </html>

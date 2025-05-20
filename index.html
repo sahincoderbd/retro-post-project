@@ -113,20 +113,22 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
 </div>
 
 <!-- lets discuss section -->
- <section class="flex flex-col gap-3 lg:gap-5 text-center mt-10">
+ <section class="flex flex-col gap-3 lg:gap-5 text-center mt-10 lg:mx-0">
 <!-- top section -->
   <div class="flex flex-col gap-3 lg:gap-4 text-center mb-7">
     <h2 class="text-3xl lg:text-5xl text-black font-extrabold">Let's Discuss</h2>
- <p class="mb-5 text-lg text-center text-gray-600">
-  Yes, you can run unit tests and view the results directly within the app. The<br> integrated testing features allow for a streamlined .
-</p>
+    <p class="mb-5 text-lg text-center text-gray-600">
+    Yes, you can run unit tests and view the results directly within the app. The<br> integrated testing features allow for a streamlined .
+    </p>
   </div>
 
-  <div class="flex flex-col lg:flex-row gap-3 lg:gap-4 text-center mb-7">
+<!-- main content section -->
+  <div class="flex flex-col justify-between lg:flex-row gap-3 lg:gap-4 text-center mb-7 p-3 lg:p-0">
+
      <!-- left post side -->
-    <div class="flex flex-col gap-4 flex-1  bg-[#797DFC1A] rounded-2xl border-2 border-[#797DFC] p-4">
+    <div class="flex flex-col gap-4 basis-[70%] bg-[#797DFC1A] rounded-2xl border-2 border-[#797DFC] p-4">
     <!-- post-1 -->
-      <div class="flex gap-5">
+      <div class="flex flex-col lg:flex-row gap-5">
         <!-- profile image -->
         <div class="indicator">
           <span class="indicator-item status status-success"></span>
@@ -136,7 +138,7 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
         </div>
         <!-- post content -->
          <div class="flex flex-col gap-2 text-left flex-1">
-          
+        
           <div class="flex gap-4 text-gray-600">
           <p># <span>Music</span> </p>
           <p>Author: <span>Awlad Hossain</span> </p>
@@ -145,10 +147,49 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
         <p class="text-lg text-gray-600 border-b-[#12132D40] pb-5 border-b border-dashed">It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative</p>
          
 
-
         <!-- post info -->
-        <div class="flex">
-          <span class="inline"><img src="images/tabler-icon-message-2.svg" alt="">560</span>
+        <div class="flex justify-between mt-3 gap-3">
+          <div class="flex justify-between lg:justify-start gap-3">
+            <!-- comment -->
+            <div class="flex gap-2 items-center">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.33333 10.5H18.6667M9.33333 15.1666H16.3333M10.5 21H7C6.07174 21 5.1815 20.6312 4.52513 19.9748C3.86875 19.3185 3.5 18.4282 3.5 17.5V8.16663C3.5 7.23837 3.86875 6.34813 4.52513 5.69175C5.1815 5.03538 6.07174 4.66663 7 4.66663H21C21.9283 4.66663 22.8185 5.03538 23.4749 5.69175C24.1313 6.34813 24.5 7.23837 24.5 8.16663V17.5C24.5 18.4282 24.1313 19.3185 23.4749 19.9748C22.8185 20.6312 21.9283 21 21 21H17.5L14 24.5L10.5 21Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="text-gray-700 text-lg">560</span>
+            </div>
+            <!-- views count -->
+            <div class="flex gap-2 items-center">
+            <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.66667 8C9.66667 8.61884 9.9125 9.21233 10.3501 9.64992C10.7877 10.0875 11.3812 10.3333 12 10.3333C12.6188 10.3333 13.2123 10.0875 13.6499 9.64992C14.0875 9.21233 14.3333 8.61884 14.3333 8C14.3333 7.38116 14.0875 6.78767 13.6499 6.35008C13.2123 5.9125 12.6188 5.66667 12 5.66667C11.3812 5.66667 10.7877 5.9125 10.3501 6.35008C9.9125 6.78767 9.66667 7.38116 9.66667 8Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22.5 8C19.7 12.6667 16.2 15 12 15C7.8 15 4.3 12.6667 1.5 8C4.3 3.33333 7.8 1 12 1C16.2 1 19.7 3.33333 22.5 8Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <span class="text-gray-700 text-lg">1,568</span>
+            </div>
+            <!-- published time -->
+            <div class="flex gap-2 items-center">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9.91667 14H14V8.16667M3.5 14C3.5 15.3789 3.77159 16.7443 4.29926 18.0182C4.82694 19.2921 5.60036 20.4496 6.57538 21.4246C7.55039 22.3996 8.70791 23.1731 9.98182 23.7007C11.2557 24.2284 12.6211 24.5 14 24.5C15.3789 24.5 16.7443 24.2284 18.0182 23.7007C19.2921 23.1731 20.4496 22.3996 21.4246 21.4246C22.3996 20.4496 23.1731 19.2921 23.7007 18.0182C24.2284 16.7443 24.5 15.3789 24.5 14C24.5 12.6211 24.2284 11.2557 23.7007 9.98182C23.1731 8.70791 22.3996 7.55039 21.4246 6.57538C20.4496 5.60036 19.2921 4.82694 18.0182 4.29927C16.7443 3.77159 15.3789 3.5 14 3.5C12.6211 3.5 11.2557 3.77159 9.98182 4.29927C8.70791 4.82694 7.55039 5.60036 6.57538 6.57538C5.60036 7.55039 4.82694 8.70791 4.29926 9.98182C3.77159 11.2557 3.5 12.6211 3.5 14Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            <span class="text-gray-700 text-lg">5 min</span>
+            </div>
+          </div>
+       
+
+          <!-- mark as read -->
+          <div class="flex gap-2 items-center self-end cursor-pointer">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_57_425)">
+              <path d="M13.9998 0C6.26805 0 9.15527e-05 6.26814 9.15527e-05 13.9999C9.15527e-05 21.7314 6.26805 28 13.9998 28C21.7315 28 27.9999 21.7314 27.9999 13.9999C27.9999 6.26814 21.7315 0 13.9998 0ZM14 4.91741L22.2847 10.0835H5.71542L14 4.91741ZM22.3879 18.333H22.3871C22.3871 19.1616 21.7155 19.8331 20.887 19.8331H7.1131C6.28447 19.8331 5.61303 19.1615 5.61303 18.333V10.4122C5.61303 10.3245 5.62199 10.2393 5.63655 10.1556L13.552 15.0914C13.5617 15.0975 13.5721 15.1016 13.5821 15.1072C13.5925 15.113 13.6032 15.1186 13.6138 15.1239C13.6697 15.1527 13.7273 15.176 13.7862 15.1912C13.7923 15.1929 13.7983 15.1936 13.8044 15.195C13.869 15.2102 13.9344 15.2197 13.9998 15.2197H14.0002C14.0007 15.2197 14.0012 15.2197 14.0012 15.2197C14.0665 15.2197 14.1319 15.2105 14.1965 15.195C14.2026 15.1935 14.2086 15.1929 14.2147 15.1912C14.2735 15.176 14.3309 15.1527 14.3871 15.1239C14.3977 15.1186 14.4084 15.113 14.4188 15.1072C14.4287 15.1016 14.4392 15.0975 14.4489 15.0914L22.3644 10.1556C22.3789 10.2393 22.3879 10.3244 22.3879 10.4122V18.333Z" fill="#10B981"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_57_425">
+              <rect width="28" height="28" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+          </div>
+         
+
         </div>
         </div>
         
@@ -157,7 +198,7 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
       
     </div>
 <!-- right side bar -->
-    <div class="flex flex-col gap-3 rounded-xl bg-gray-200 min-h-60 p-3 lg:p-4 basis-[450px] ">
+    <div class="flex flex-col gap-3 rounded-xl bg-gray-200 min-h-60 p-3 lg:p-4 basis-[30%] ">
 
        <div class="flex flex-nowrap justify-between mb-3 ">
        <h3>Title</h3>
@@ -177,9 +218,9 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
 
     <div class="flex flex-nowrap justify-between items-center gap-4 p-3 rounded-xl bg-white text-left">
 
-    <h5 class="basis-2/3">10 Kids Unaware of Their Halloween Costume</h5>
+    <h5 class="basis-3/4">10 Kids Unaware of Their Halloween Costume</h5>
     
-    <div class="text-gray-700 text-lg basis-1/3 flex flex-1 justify-end">
+    <div class="text-gray-700 text-lg basis-1/4 flex flex-1 justify-end">
 
       <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M11.6667 14C11.6667 14.6188 11.9125 15.2123 12.3501 15.6499C12.7877 16.0875 13.3812 16.3333 14 16.3333C14.6188 16.3333 15.2123 16.0875 15.6499 15.6499C16.0875 15.2123 16.3333 14.6188 16.3333 14C16.3333 13.3812 16.0875 12.7877 15.6499 12.3501C15.2123 11.9125 14.6188 11.6667 14 11.6667C13.3812 11.6667 12.7877 11.9125 12.3501 12.3501C11.9125 12.7877 11.6667 13.3812 11.6667 14Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -196,18 +237,140 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
 
 
   </div>
- 
+  </section>
 
+  <!-- Join our forum -->
+  <section class="my-6">
+    <div
+class="hero min-h-[500px] rounded-3xl bg-[#12132D]"
+>
+<div class="rounded-3xl"></div>
+<div class="hero-overlay text-neutral-content text-left flex flex-col-reverse gap-4 py-5 lg:flex-row items-center justify-start p-3 lg:px-20 rounded-3xl">
+  <div class=" flex flex-col basis-[60%] items-center lg:items-start justify-center">
+    <h1 class="mb-5 text-4xl lg:text-6xl text-center lg:text-left font-extrabold">Join Our <span class="bg-gradient-to-r from-violet-500 to-violet-800 bg-clip-text text-transparent">
+      Forum
+    </span></h1>
+    <p class="mb-5 text-lg text-center lg:text-left">
+      Share your favorite opinion and win and wp forum coffee mug! Yes, <br> you can run unit tests and view the results directly within the app. <br>forum coffee mug!
+    </p>
+    <button class="bg-[#797DFC] text-white cursor-pointer rounded-full w-[200px] px-6 py-3 text-lg font-normal border-none shadow-none">Registered Now</button>
 
+    
+  </div>
+  <div class="flex flex-col lg:basis-[40%] rounded-2xl px-4 justify-end items-end">
+    <img class="w-[450px]" src="images/Group 26.png" alt="">
+  </div>
+</div>
+</div>
+  </section>
 
+  <!-- latest post section -->
+  <section class="flex flex-col gap-3 lg:gap-5 text-center my-10 lg:mx-0">
+    <!-- top section -->
+      <div class="flex flex-col gap-3 lg:gap-4 text-center mb-7">
+        <h2 class="text-3xl lg:text-5xl text-black font-extrabold">Latest Post</h2>
+        <p class="mb-5 text-lg text-center text-gray-600">
+          Yes, you can run unit tests and view the results directly within the app. <br>The integrated testing features allow for a streamlined .
+        </p>
+      </div>
+<!-- post section  -->
+      <div class="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 gap-3 lg:gap-4 text-center mb-7 p-2 lg:p-0">
 
+       <div class="flex flex-col gap-4 bg-[#797DFC1A] rounded-2xl border-2 border-[#797DFC] p-3 lg:p-4">
+       <!-- post-1 -->
+            <div class="flex flex-col gap-3 text-left">
+           
+             <img class="rounded-2xl" src="images/Rectangle 4.png" alt="">
+              <!-- published date -->
+              <div class="flex gap-2 items-center">
+                
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_29_1881)">
+                  <path d="M4 7C4 6.46957 4.21071 5.96086 4.58579 5.58579C4.96086 5.21071 5.46957 5 6 5H18C18.5304 5 19.0391 5.21071 19.4142 5.58579C19.7893 5.96086 20 6.46957 20 7V19C20 19.5304 19.7893 20.0391 19.4142 20.4142C19.0391 20.7893 18.5304 21 18 21H6C5.46957 21 4.96086 20.7893 4.58579 20.4142C4.21071 20.0391 4 19.5304 4 19V7Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M16 3V7" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M8 3V7" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 11H20" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M11 16C11 16.2652 11.1054 16.5196 11.2929 16.7071C11.4804 16.8946 11.7348 17 12 17C12.2652 17 12.5196 16.8946 12.7071 16.7071C12.8946 16.5196 13 16.2652 13 16C13 15.7348 12.8946 15.4804 12.7071 15.2929C12.5196 15.1054 12.2652 15 12 15C11.7348 15 11.4804 15.1054 11.2929 15.2929C11.1054 15.4804 11 15.7348 11 16Z" stroke="#12132D" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_29_1881">
+                  <rect width="24" height="24" fill="white"/>
+                  </clipPath>
+                  </defs>
+                  </svg>
+                <span class="text-gray-700 text-lg">29 January 2024</span>
 
- </section>
+               
+             </div>
+            <h3 class="text-xl lg:text-2xl text-black font-semibold">10 Kids Unaware of Their Halloween Costume</h3>
+           <p class="text-lg text-gray-600">It’s one thing to subject yourself to ha Halloween costume mishap because,<br> hey that’s your prerogative</p>
+            
+   
+           <!-- post author -->
+           <div class="flex justify-start mt-3 gap-3">
+            <img class="w-[50px] h-[50px]" src="images/Ellipse 1.png" alt="autor">
+            <div>
+              <h6 class="text-black text-xl font-medium">Cameron Williamson</h6>
+              <p class="text-base text-gray-700 ">Unknown</p>
+            </div>
+   
+           </div>
+           </div>
+         
+       </div>
+      </section>
 </main>
 
-<footer>
 
-</footer>
-   
+
+  
+
+  <!-- footer section -->
+ 
+  <footer class=" text-center bg-gray-200 text-primary-content rounded-none lg:rounded-2xl py-10 mt-5 px-2 lg:px-10">
+        <div class="flex flex-col gap-4 justify-center text-center items-center border-b border-gray-300 pb-4 " >
+          
+
+
+      <img src="images/logo.png" alt="">
+    
+      <p class="text-gray-700 text-lg">Contrary to popular belief, Lorem Ipsum is not simply random text.
+        <br> It has roots in a piece of classical Latin literature from 45 BC</p>
+  
+    
+      <div class="flex gap-3 justify-center items-center pb-5  ">
+        <a>
+          <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.8879 2.65563C19.1421 2.98551 18.3548 3.19169 17.5262 3.31539C18.3548 2.82057 19.0178 2.0371 19.3078 1.0887C18.5206 1.54228 17.6505 1.87216 16.6975 2.07834C15.9517 1.29487 14.8745 0.800049 13.7143 0.800049C11.4769 0.800049 9.6539 2.6144 9.6539 4.84109C9.6539 5.17097 9.69533 5.45962 9.7782 5.74827C6.42212 5.58333 3.39751 3.97516 1.36729 1.50105C1.03583 2.11957 0.828661 2.77934 0.828661 3.52157C0.828661 4.92356 1.53302 6.16062 2.65171 6.90285C1.98879 6.86162 1.36729 6.69668 0.787228 6.40803V6.44926C0.787228 8.42855 2.19595 10.078 4.06044 10.4491C3.72897 10.5315 3.35608 10.5728 2.98318 10.5728C2.73458 10.5728 2.44455 10.5315 2.19595 10.4903C2.73458 12.0985 4.22617 13.2943 6.00779 13.2943C4.59907 14.3664 2.85888 15.0262 0.95296 15.0262C0.621495 15.0262 0.290031 15.0262 0 14.9849C1.82305 16.1395 3.93614 16.7993 6.25639 16.7993C13.7558 16.7993 17.8576 10.614 17.8576 5.25345C17.8576 5.0885 17.8576 4.88233 17.8576 4.71739C18.6449 4.18133 19.3492 3.48033 19.8879 2.65563Z" fill="#12132D"/>
+            </svg>
+        </a>
+        <a>
+          <svg width="13" height="23" viewBox="0 0 13 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.2142 22.1658V12.3286H0.887878V8.49479H4.2142V5.6675C4.2142 2.38645 6.22777 0.599854 9.16874 0.599854C10.5775 0.599854 11.7882 0.704238 12.1411 0.750894V4.17978L10.1014 4.18071C8.50191 4.18071 8.19221 4.93712 8.19221 6.0471V8.49479H12.0068L11.5101 12.3286H8.19221V22.1658H4.2142Z" fill="#12132D"/>
+            </svg>
+        </a>
+        <a>
+          <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.1981 2.16218C15.4173 2.16218 15.7985 2.17418 17.0702 2.23189C17.8349 2.24121 18.5922 2.38094 19.3094 2.64502C19.8295 2.84463 20.3018 3.15042 20.696 3.54269C21.0901 3.93496 21.3974 4.40502 21.5979 4.92262C21.8633 5.63637 22.0037 6.39011 22.0131 7.15109C22.0705 8.41674 22.0831 8.79615 22.0831 12C22.0831 15.2038 22.071 15.5833 22.0131 16.8489C22.0037 17.6099 21.8633 18.3636 21.5979 19.0774C21.3974 19.595 21.0901 20.065 20.696 20.4573C20.3018 20.8496 19.8295 21.1554 19.3094 21.355C18.5922 21.6191 17.8349 21.7588 17.0702 21.7681C15.7991 21.8252 15.4179 21.8378 12.1981 21.8378C8.97827 21.8378 8.59704 21.8258 7.32588 21.7681C6.56126 21.7588 5.8039 21.6191 5.08672 21.355C4.56664 21.1554 4.09432 20.8496 3.70017 20.4573C3.30601 20.065 2.99876 19.595 2.79819 19.0774C2.53284 18.3636 2.39244 17.6099 2.38308 16.8489C2.32567 15.5833 2.31304 15.2038 2.31304 12C2.31304 8.79615 2.32509 8.41674 2.38308 7.15109C2.39244 6.39011 2.53284 5.63637 2.79819 4.92262C2.99876 4.40502 3.30601 3.93496 3.70017 3.54269C4.09432 3.15042 4.56664 2.84463 5.08672 2.64502C5.8039 2.38094 6.56126 2.24121 7.32588 2.23189C8.59761 2.17475 8.97884 2.16218 12.1981 2.16218ZM12.1981 0C8.92545 0 8.51321 0.0137136 7.22713 0.0719965C6.22643 0.0918058 5.23634 0.280376 4.299 0.629684C3.49491 0.931193 2.76661 1.40368 2.16491 2.01419C1.55092 2.61323 1.07575 3.33847 0.77261 4.13923C0.421625 5.0721 0.23215 6.05745 0.212246 7.05338C0.154832 8.33217 0.141052 8.74244 0.141052 11.9994C0.141052 15.2564 0.154832 15.6667 0.213394 16.9466C0.233299 17.9425 0.422773 18.9279 0.773759 19.8608C1.07657 20.6614 1.55133 21.3867 2.16491 21.9858C2.76694 22.5965 3.49565 23.069 4.30015 23.3703C5.23749 23.7196 6.22758 23.9082 7.22828 23.928C8.51436 23.9851 8.92487 24 12.1992 24C15.4736 24 15.8841 23.9863 17.1701 23.928C18.1709 23.9082 19.1609 23.7196 20.0983 23.3703C20.899 23.0614 21.6261 22.5896 22.2331 21.9851C22.8401 21.3806 23.3137 20.6567 23.6235 19.8596C23.9745 18.9268 24.164 17.9414 24.1839 16.9455C24.2413 15.6667 24.2551 15.2564 24.2551 11.9994C24.2551 8.74244 24.2413 8.33217 24.1827 7.05224C24.1628 6.05631 23.9734 5.07096 23.6224 4.13809C23.3196 3.33743 22.8448 2.6122 22.2312 2.01305C21.6292 1.4024 20.9005 0.929903 20.096 0.628541C19.1586 0.279233 18.1686 0.0906631 17.1679 0.0708538C15.8829 0.0137137 15.4707 0 12.1981 0Z" fill="#12132D"/>
+            <path d="M12.1959 5.83777C10.9713 5.83777 9.77422 6.19916 8.75602 6.87625C7.73782 7.55334 6.94424 8.51571 6.47561 9.64167C6.00699 10.7676 5.88437 12.0066 6.12327 13.2019C6.36218 14.3972 6.95187 15.4952 7.81777 16.3569C8.68368 17.2187 9.78691 17.8056 10.988 18.0434C12.189 18.2811 13.4339 18.1591 14.5653 17.6927C15.6966 17.2263 16.6636 16.4365 17.344 15.4232C18.0243 14.4098 18.3874 13.2185 18.3874 11.9998C18.3874 10.3655 17.7351 8.79817 16.574 7.64258C15.4128 6.48698 13.838 5.83777 12.1959 5.83777ZM12.1959 15.9996C11.401 15.9996 10.624 15.765 9.96303 15.3255C9.30211 14.886 8.78698 14.2613 8.48279 13.5304C8.1786 12.7996 8.09901 11.9953 8.25409 11.2194C8.40916 10.4436 8.79194 9.73085 9.354 9.17147C9.91607 8.61209 10.6322 8.23114 11.4118 8.07681C12.1914 7.92247 12.9995 8.00168 13.7339 8.30442C14.4683 8.60715 15.0959 9.11982 15.5375 9.77759C15.9792 10.4354 16.2149 11.2087 16.2149 11.9998C16.2149 13.0606 15.7914 14.0779 15.0377 14.8281C14.284 15.5782 13.2618 15.9996 12.1959 15.9996Z" fill="#12132D"/>
+            <path d="M18.6329 7.03404C19.432 7.03404 20.0798 6.38936 20.0798 5.59411C20.0798 4.79885 19.432 4.15417 18.6329 4.15417C17.8339 4.15417 17.1861 4.79885 17.1861 5.59411C17.1861 6.38936 17.8339 7.03404 18.6329 7.03404Z" fill="#12132D"/>
+            </svg>
+            
+        </a>
+        <a>
+          <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7883 0C5.39696 0 0.255066 5.11733 0.255066 11.4781C0.255066 16.5476 3.57086 20.8519 8.13609 22.3823C8.71275 22.478 8.90497 22.1432 8.90497 21.8084C8.90497 21.5215 8.90497 20.8041 8.90497 19.8476C5.68529 20.565 5.01251 18.3172 5.01251 18.3172C4.48391 16.9781 3.71503 16.6433 3.71503 16.6433C2.65782 15.9259 3.81114 15.9259 3.81114 15.9259C4.96446 16.0216 5.58918 17.1215 5.58918 17.1215C6.59833 18.8911 8.28026 18.365 8.95303 18.0781C9.04914 17.3128 9.33747 16.8346 9.67385 16.5476C7.12694 16.2607 4.43585 15.2563 4.43585 10.8564C4.43585 9.61293 4.86835 8.56077 5.63723 7.79556C5.54112 7.50861 5.10862 6.3608 5.73334 4.73473C5.73334 4.73473 6.69444 4.44777 8.90497 5.93037C9.81802 5.69124 10.8272 5.54776 11.7883 5.54776C12.7494 5.54776 13.7585 5.69124 14.6716 5.93037C16.8821 4.44777 17.8432 4.73473 17.8432 4.73473C18.4679 6.31297 18.0835 7.46078 17.9393 7.79556C18.6601 8.60859 19.1407 9.61293 19.1407 10.8564C19.1407 15.2563 16.4496 16.2129 13.8546 16.4998C14.2871 16.8346 14.6235 17.552 14.6235 18.6041C14.6235 20.1345 14.6235 21.378 14.6235 21.7606C14.6235 22.0476 14.8157 22.4302 15.4405 22.3345C20.0057 20.8519 23.3215 16.5476 23.3215 11.4781C23.3215 5.11733 18.1796 0 11.7883 0Z" fill="#12132D"/>
+            </svg>
+            
+            
+        </a>
+      </div>
+
+      </div>
+      
+      <p class="text-gray-700 text-sm pt-6"> © 2025 - All right reserved</p>
+  </footer>
+
+
 </body>
 </html>

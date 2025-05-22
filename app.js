@@ -140,10 +140,9 @@ loadPostData();
 
 //  user active status update
 const userActiveStatusUpdate=()=>{
-
-const postContents=document.querySelectorAll('.post-container');
-console.log(postContents.length);
-postContents.forEach((element)=>{
+const postDiv=document.querySelectorAll('.post-container');
+console.log(postDiv.length);
+postDiv.forEach((element)=>{
   
   const isActive=element.getAttribute('isactive')==='true';
 

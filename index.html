@@ -9,7 +9,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWdWSSV1L2t1tU9fAfO2SvfJ/2N1x3X+6gL9Ok/yB2a6G+vG1gL2hH2X+6gL9Ok/yB2a6G+v==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+
+    <style>
+      /* Custom fade-in-up animation */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-fade-in-up {
+        animation: fadeInUp 1s ease-in-out;
+      }
+      /* Respect reduced motion preferences */
+      @media (prefers-reduced-motion: reduce) {
+        .animate-fade-in-up {
+          animation: none;
+        }
+      }
+      </style>
+
+  </head>
 <body class="bg-white font-sans container mx-auto">
     
 <!-- Navbar -->
@@ -130,34 +154,40 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
     <div id="postsContainer" class="flex flex-col gap-5 basis-[70%] ">
     
     </div>
-<!-- right side bar -->
-    <div id="rightSideBar" class="flex flex-col gap-3 rounded-xl bg-gray-200 p-3 lg:p-4 min-h-60 basis-[30%] ">
+    <!-- right side bar -->
+    <div id="rightSideBar" class="flex flex-col flex-nowrap gap-3 rounded-xl bg-gray-200 p-3 lg:p-4 min-h-60 basis-[30%] ">
 
-       <div class="flex flex-nowrap justify-between mb-3 ">
+      <div class="flex flex-nowrap justify-between mb-3 ">
        <h3>Title</h3>
 
-       <div class="flex flex-nowrap gap-1 text-gray-800"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g clip-path="url(#clip0_30_2429)">
-    <path d="M7 12L12 17L22 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M2 12L7 17M12 12L17 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </g>
-    <defs>
-    <clipPath id="clip0_30_2429">
-    <rect width="24" height="24" fill="white"/>
-    </clipPath>
-    </defs>
-      </svg>Mark as read (<span id="markAsReadCount">0</span>)</div>
+       <div class="flex flex-nowrap gap-1 text-gray-800">
+        
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_30_2429)">
+            <path d="M7 12L12 17L22 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12L7 17M12 12L17 7" stroke="#3DCE09" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+          <clipPath id="clip0_30_2429">
+          <rect width="24" height="24" fill="white"/>
+          </clipPath>
+          </defs>
+            </svg>
+          Mark as read (<span id="markAsReadCount">0</span>)
        </div>
+      </div>
 
-   <!-- Mark as read post appear here -->
-
+     <div id="emptyMarkAsReadMessage" class="flex h-full flex-col gap-3 justify-center items-center">
+      <img class="w-14 h-14" src="images/image 1.png" alt="">
+      <h3 class="text-xl text-black font-semibold">No Posts Marked as Readed</h2>
+        <p class="mb-5 text-lg text-center text-gray-600">
+         to mark as read post click the envelope icon on the left side post
+          </p>
+     </div>
+  
+      <!-- Mark as read post appear here -->
+       
     </div>
-    <div>
-
-
-    </div>
-
-
   </div>
   </section>
 
@@ -181,6 +211,7 @@ class="hero min-h-[500px] rounded-3xl bg-[#12132D]"
   </div>
   <div class="flex flex-col lg:basis-[40%] rounded-2xl px-4 justify-end items-end">
     <img class="w-[450px]" src="images/Group 26.png" alt="">
+   
   </div>
 </div>
 </div>

@@ -17,13 +17,14 @@
           opacity: 0;
           transform: translateY(10px);
         }
+      
         100% {
           opacity: 1;
           transform: translateY(0);
         }
       }
       .animate-fade-in-up {
-        animation: fadeInUp 1s ease-in-out;
+        animation: fadeInUp .5s ease-in-out;
       }
       /* Respect reduced motion preferences */
       @media (prefers-reduced-motion: reduce) {
@@ -46,7 +47,7 @@
     <div class="navbar-end w-full lg:w-1/2 justify-center lg:justify-end items-center lg:items-start ">
         <ul class="flex flex-nowrap justify-center p-0 lg:mr-4 ">
             <li >
-              <a class="tooltip tooltip-bottom hover:bg-transparent p-2" data-tip="Home">
+              <a class="tooltip cursor-pointer tooltip-bottom hover:bg-transparent p-2" data-tip="Home">
                 <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
                     <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
@@ -55,7 +56,7 @@
               </a>
             </li>
             <li>
-              <a class="tooltip tooltip-bottom hover:bg-transparent p-2 " data-tip="Create Post">
+              <a class="tooltip cursor-pointer tooltip-bottom hover:bg-transparent p-2 " data-tip="Create Post">
                 <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
                   <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
@@ -64,7 +65,7 @@
               </a>
             </li>
             <li>
-              <a class="tooltip tooltip-bottom hover:bg-transparent p-2" data-tip="Join Forum">
+              <a class="tooltip cursor-pointer tooltip-bottom hover:bg-transparent p-2" data-tip="Join Forum">
                 <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
                   <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
@@ -74,7 +75,7 @@
               </a>
             </li>
             <li>
-              <a class="tooltip tooltip-bottom hover:bg-transparent p-2" data-tip="Language">
+              <a class="tooltip cursor-pointer tooltip-bottom hover:bg-transparent p-2" data-tip="Language">
                 <svg width="45" height="45" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="56" height="56" rx="28" fill="#12132D" fill-opacity="0.03"/>
                   <rect x="0.5" y="0.5" width="55" height="55" rx="27.5" stroke="#030712" stroke-opacity="0.1"/>
@@ -107,7 +108,10 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
     <p class="mb-5 text-lg text-center lg:text-left">
       Share your favorite opinion and win and wp <br>forum coffee mug!
     </p>
+
+    <!-- Search bar -->
     <div class="flex flex-nowrap gap-2 bg-white p-1 rounded-full items-center">
+      
       <label class="input rounded-full border-none shadow-none focus-within:shadow-none outline-none focus-within:outline-none">
         <svg class="h-[1em] text-gray-700 opacity-100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
@@ -115,17 +119,19 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
             <path d="m21 21-4.3-4.3"></path>
           </g>
         </svg>
-        <input
+        <input id="searchInput"
           type="search"
           placeholder="Search Category"
           required
-          class="text-gray-700 rounded-full border-none outline-none focus:outline-none ring-0 focus:ring-0 shadow-none focus:shadow-none"
+          class="text-gray-700 bg-transparent  rounded-full border-none outline-none focus:outline-none ring-0 focus:ring-0 shadow-none focus:shadow-none"
         />
+        
       </label>
       
   
-<button class="btn bg-[#797DFC] text-white cursor-pointer rounded-full px-6 py-6 text-lg font-medium">Search</button>
+<button onclick="searchBarHandler()" id="searchBtn" class="btn bg-[#797DFC] text-white cursor-pointer rounded-full px-6 py-6 text-lg font-medium">Search</button>
   </div>
+  <span class="hidden text-lg text-gray-200 font-semibold" id="inputAlert">Please search anything</span>
     
   </div>
   <div class="flex flex-col w-full lg:basis-[20%] bg-white rounded-2xl px-4 lg:p-10 py-3 gap-3 lg:gap-5 ">
@@ -151,9 +157,29 @@ style="background-image: url(images/Group\ 8\ \(1\).jpg);"
   <div class="flex flex-col justify-between lg:flex-row gap-3 lg:gap-4 text-center mb-7 p-3 lg:p-0">
 
      <!-- left post side -->
-    <div id="postsContainer" class="flex flex-col gap-5 basis-[70%] ">
+    <div class="flex flex-col gap-5 basis-[70%] ">
+
+    <div id="postsContainer" class="flex flex-col gap-5  ">
+      </div>
+    <!-- no post found message -->
+    <div id="errorMessageMainContainer" class="flex flex-col">
     
+      <div id="lodingSpinnerId" class="hidden" >
+        <span class="loading loading-spinner text-error"></span>
+      </div>
+   
+      <div id="noPostFoundContainer" class="hidden flex h-full flex-col gap-3 justify-center items-center">
+        <img class="w-14 h-14" src="images/no-data.gif" alt="">
+        <h3 class="text-xl text-black font-semibold">No Posts Found</h2>
+          <p class="mb-5 text-lg text-center text-gray-600">
+           Please search an another category
+            </p>
+  
+        </div>
     </div>
+    </div>
+    
+   
     <!-- right side bar -->
     <div id="rightSideBar" class="flex flex-col flex-nowrap gap-3 rounded-xl bg-gray-200 p-3 lg:p-4 min-h-60 basis-[30%] ">
 
